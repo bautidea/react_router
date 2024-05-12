@@ -16,3 +16,18 @@ export function navigate(href) {
   // Now i have to sent the event.
   window.dispatchEvent(navigationEvent); // Dispatching event so a listener can grab it.
 }
+
+export function Link({ target, destination, ...props }) {
+  // In '...props' we are going to pass other attributes like, 'className' for example.
+
+  const handleClick = (event) => {
+    // Preventing default state in which a page will re-load when clicking on <a> element.
+    event.preventDefault();
+
+    navigate(destination);
+  };
+
+  return (
+    <a onClick={handleClick} href={destination} target={target} {...props}></a>
+  );
+}
