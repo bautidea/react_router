@@ -19,7 +19,7 @@ function navigate(href) {
 
 export function Link({ target, destination, ...props }) {
   // In '...props' we are going to pass other attributes like, 'className' for example.
-  // Also the props 'children' get passed through here.
+  // Also the props 'children' get passed through here, like 'children = {children}'
 
   const handleClick = (event) => {
     // Natively the keyboard functions on a <a> element doesnt work, so we have to make them work manually.
