@@ -16,4 +16,21 @@ In order to create React Router from scratch, this steps were followed:
 
 5 - Added a default component in &lt;Router&gt; component, when an endpoint is not defined or found.
 
-6 -
+6 - Support routes with parameters, i've used 'path-to-regexp' module. In order to pass parameters through URL.
+
+First we need to indicate in the URL that we are going to pass dynamic parameters, so when declaring the routes with its component we add expected parameters, like this.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/routes.png' height='250px' width='auto' />
+</div>
+
+Then we create the Page Component, declaring props.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/searchPageImg.png' height='150px' width='auto' />
+<p>if URL = 'url/search/123/pasta' -> routeParams  = { id : '123', search : 'pasta' } </p>
+</div>
+
+Finally &lt;Router&gt; Component will compare the current URL in browser against the routes declared in the above constant. If the URL contains '/search' then by using 'match' function in 'path-to-regexp' module, we obtain the dynamic parameters and pass it to the 'SearchPage' Component.
+
+    if URL = 'url/search/123/pasta' -> routeParams  = { id : '123', search : 'pasta' }
