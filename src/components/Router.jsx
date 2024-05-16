@@ -55,7 +55,7 @@ export default function Router({
     // If the path match then we retrieve the params that are declared on the URL.
     // like -> /about/:id/:search | we retrieve -> { id : 'value', search : 'value' }
     routeParams = matched.params;
-    return true;
+    return true; // .find() method need a return false or true.
   })?.Component;
 
   // If the path isn't found we return the DefaultComponent.

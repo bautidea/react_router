@@ -2,7 +2,7 @@ import { EVENTS } from '../events';
 
 // The Best from to perform a SPA, is by creating a function called 'navigate' that takes 'href' as a
 // parameter.
-function navigate(href) {
+export function navigate(href) {
   // Here we use the 'history' property, provides a form of manipulating browser history (pages visited).
   // Then  we use the 'pushState()' method of 'history' to add an entry to the browser session.
   // We perform this to change the URL, but we dont refresh the page, we just update the URL.
