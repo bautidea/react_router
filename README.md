@@ -34,3 +34,20 @@ Then we create the Page Component, declaring props.
 Finally &lt;Router&gt; Component will compare the current URL in browser against the routes declared in the above constant. If the URL contains '/search' then by using 'match' function in 'path-to-regexp' module, we obtain the dynamic parameters and pass it to the 'SearchPage' Component.
 
     if URL = 'url/search/123/pasta' -> routeParams  = { id : '123', search : 'pasta' }
+
+7 - Creating &lt;Route&gt; Component to pass routes to the &lt;Router&gt; Component. The way we pass props from Route to Router is by accessing to child props in Router.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/routesComponent.png' height='100px' width='auto' />
+<p>&lt;Route&gt; is an empty component</p>
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/routesAsChild.png' height='180px' width='auto' />
+<p>Passing &lt;Route&gt; as children</p>
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/routeFromChildren.png' height='300px' width='auto' />
+<p>Obtaining routes from &lt;Router&gt; Component childrens</p>
+</div>

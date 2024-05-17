@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Children } from 'react';
 import { EVENTS } from '../events';
 import { match } from 'path-to-regexp';
 
 export default function Router({
+  children,
   routes = [],
   defaultComponent: DefaultComponent = () => null,
 }) {
@@ -32,13 +33,37 @@ export default function Router({
     };
   }, []);
 
+  // From <Route> children component we are obtaining the routes and their components.
+  // 'Children' is imported from react and lets us manipulate and transform the JSX
+  // that is received as a 'children' prop.
+  // When mapping Children we have two parameters:
+  //    children -> contains all elements that are passed as children.
+  //    child -> represents each individual child element within 'children'.
+  const routeFromChildren = Children.map(children, (child) => {
+    // From child object we are obtaining, child Component name ('Route') and
+    // the props from it -> { path , Component }
+    const { props, type } = child;
+    const { name } = type;
+
+    // We check if the children name Component is Route.
+    const isRoute = name === 'Route';
+
+    // If the child is 'Route' we return the property 'props' which has all
+    // children props as an object like -> { path : '/' , Component : HomePage }
+    // Else we return null.
+    return isRoute ? props : null;
+  });
+
+  // We concatenate the passed routes as children to the empty props array.
+  const routesToUse = routes.concat(routeFromChildren);
+
   let routeParams = {};
 
   // In order to find which component is going to be rendered, we need to see which route matches.
   // We compare if the 'currentPath' (the path we are in browser) is equal to one of the paths
   // passed in the 'routes' array, if 'path' and 'currentPath' matches, we obtain the property
   // 'Component' from 'routes' array.
-  const Page = routes.find(({ path }) => {
+  const Page = routesToUse.find(({ path }) => {
     if (path === currentPath) return true;
 
     // Using 'path-to-regexp' to detect dynamic routes.
