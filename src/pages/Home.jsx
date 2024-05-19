@@ -1,4 +1,5 @@
-import { Link, navigate } from '../components/Link';
+import { Link } from '../components/Link';
+import { navigate } from '../scripts/navigate';
 import { useState } from 'react';
 
 export default function HomePage() {

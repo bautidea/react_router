@@ -51,3 +51,9 @@ Finally &lt;Router&gt; Component will compare the current URL in browser against
 <img src='./src/assets/git/routeFromChildren.png' height='300px' width='auto' />
 <p>Obtaining routes from &lt;Router&gt; Component childrens</p>
 </div>
+
+8 - Adding Lazy Load to routes, by applying <a href='https://react.dev/reference/react/lazy'>'lazy'</a> function from react, it lets us defer loading component code until it's rendered for the first time.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/lazyLoad.png' height='450px' width='auto' />
+</div>
