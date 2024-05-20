@@ -25,6 +25,18 @@ export default function AboutPage({ routeParams }) {
 
   return (
     <>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'end',
+          gap: '25px',
+        }}
+      >
+        <Link destination={'/en/about/'}>English</Link>
+        <Link destination={'/es/about/'}>Español</Link>
+      </div>
+
       <h1>{title}</h1>
       <p>{description}</p>
       <Link destination={'/'}>{homeLink}</Link>

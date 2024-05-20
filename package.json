@@ -10,17 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@swc/core": "^1.5.7",
-    "@swc/core-win32-x64-msvc": "^1.5.7",
-    "@swc/wasm": "^1.5.7",
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "path-to-regexp": "6.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vitest": "^1.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
