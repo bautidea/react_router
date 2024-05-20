@@ -80,4 +80,4 @@ Finally &lt;Router&gt; Component will compare the current URL in browser against
 <p>Displaying About Page in different languages.</p>
 </div>
 
-10 - Testing the application using <a href="https://vitest.dev/">'vitest'</a>
+10 - Testing the application using <a href="https://vitest.dev/">'vitest'</a>.

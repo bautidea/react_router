@@ -55,7 +55,7 @@ export default function Router({
   });
 
   // We concatenate the passed routes as children to the empty props array.
-  const routesToUse = routes.concat(routeFromChildren);
+  const routesToUse = routes.concat(routeFromChildren).filter(Boolean);
 
   let routeParams = {};
 
