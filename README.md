@@ -21,7 +21,7 @@ In order to create React Router from scratch, this steps were followed:
 First we need to indicate in the URL that we are going to pass dynamic parameters, so when declaring the routes with its component we add expected parameters, like this.
 
 <div width='100%' align='center'>
-<img src='./src/assets/git/routes.png' height='auto' width='280px' />
+<img src='./src/assets/git/routes.png' height='auto' width='350px' />
 </div>
 
 Then we create the Page Component, declaring props.
@@ -48,12 +48,34 @@ Finally &lt;Router&gt; Component will compare the current URL in browser against
 </div>
 
 <div width='100%' align='center'>
-<img src='./src/assets/git/routeFromChildren.png' height='auto' width='700px' />
+<img src='./src/assets/git/routeFromChildren.png' height='auto' width='600px' />
 <p>Obtaining routes from &lt;Router&gt; Component childrens</p>
 </div>
 
 8 - Adding Lazy Load to routes, by applying <a href='https://react.dev/reference/react/lazy'>'lazy'</a> function from react, it lets us defer loading component code until it's rendered for the first time.
 
 <div width='100%' align='center'>
-<img src='./src/assets/git/lazyLoad.png' height='auto' width='700px' />
+<img src='./src/assets/git/lazyLoad.png' height='auto' width='600px' />
+</div>
+<div height='150px'/>
+
+9 - Providing internalization for 'About' page, it can be displayed in spanish or english. Language can be selected by passing the parameter in the URL.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/langAbout.png' height='auto' width='400px' />
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/i18nLang.png' height='auto' width='400px' />
+<p>An object stores possible languages.</p>
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/i18nHook.png' height='auto' width='400px' />
+<p>Hook to select Language</p>
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/aboutPage.png' height='auto' width='400px' />
+<p>Displaying About Page in different languages.</p>
 </div>

@@ -25,7 +25,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={Page404}>
           <Route path="/" Component={HomePage} />
-          <Route path="/about" Component={AboutPage} />
+          <Route path="/:lang?/about" Component={AboutPage} />
           <Route path="/search/:id/:search" Component={SearchPage} />
         </Router>
       </Suspense>
