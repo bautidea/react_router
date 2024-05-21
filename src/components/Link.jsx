@@ -1,4 +1,4 @@
-import { navigate } from '../scripts/navigate';
+import { navigate } from '../utils/utils';
 
 export function Link({ target, destination, ...props }) {
   // In '...props' we are going to pass other attributes like, 'className' for example.

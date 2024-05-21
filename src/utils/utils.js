@@ -1,5 +1,10 @@
 import { EVENTS } from '../events';
 
+// Function to obtain the current browser URL.
+export function getCurrentPath() {
+  return window.location.pathname;
+}
+
 // What we are doing here to optimize loading, or create a SPA, we are using the web history
 // to get or return pages that already been loaded, that way the page getS loaded once.
 

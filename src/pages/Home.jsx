@@ -1,5 +1,5 @@
 import { Link } from '../components/Link';
-import { navigate } from '../scripts/navigate';
+import { navigate } from '../utils/utils';
 import { useState } from 'react';
 
 export default function HomePage() {

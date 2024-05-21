@@ -1,6 +1,7 @@
 import { useState, useEffect, Children } from 'react';
 import { EVENTS } from '../events';
 import { match } from 'path-to-regexp';
+import { getCurrentPath } from '../utils/utils';
 
 export default function Router({
   children,
@@ -10,14 +11,14 @@ export default function Router({
   // Here we are passing two defaults values, an empty array (when routes are not passed)
   // and a default function (if a component is not passed).
 
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [currentPath, setCurrentPath] = useState(getCurrentPath());
 
   useEffect(() => {
     // We are going to subscribe to pushState event.
     const onLocationChange = () => {
       // Changing the state to the previous page, if it was '/' -> '/about'
       // or '/about' -> '/'.
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(getCurrentPath());
     };
 
     // When event get dispatched it will set the state of current path to be
