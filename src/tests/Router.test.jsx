@@ -68,7 +68,7 @@ describe('Router', () => {
     expect(screen.getByText('About')).toBeTruthy();
   });
 
-  it('Should navigate using Links', async () => {
+  it('Should navigate using Link', async () => {
     // This test is 'async' to handle the asynchronous nature of rendering and updating the DOM
     // when a user interactions occurs (such as navigation).
     getCurrentPath.mockReturnValueOnce('/');
@@ -98,8 +98,10 @@ describe('Router', () => {
 
     // Wait for the navigation to complete and the new content to be rendered.
     // Check that the URL has changed.
-    const aboutURL = await getCurrentPath();
+    await waitFor(() => {
+      const aboutURL = getCurrentPath();
 
-    expect(aboutURL).toBe('/about');
+      expect(aboutURL).toBe('/about');
+    });
   });
 });

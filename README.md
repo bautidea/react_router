@@ -81,3 +81,17 @@ Finally &lt;Router&gt; Component will compare the current URL in browser against
 </div>
 
 10 - Testing the application using <a href="https://vitest.dev/">'vitest'</a>.
+
+11 - Publishing the project as an NPM package to be used from any site, to do this:
+
+Installed <a href='https://swc.rs/docs/getting-started'>'swc'</a>, a babel alternative that allows to compile file without a compiler.
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/swcrcConfig.png' height='auto' width='500px' />
+<p>Customized configuration to work obtained the default from <a href='https://swc.rs/docs/configuration/swcrc'>here</a></p>
+</div>
+
+<div width='100%' align='center'>
+<img src='./src/assets/git/langAbout.png' height='auto' width='400px' />
+<p>First I've modified 'package.json' file, and added a 'prepare' value in the scripts key. This is a special script that will execute before publishing.</p>
+</div>

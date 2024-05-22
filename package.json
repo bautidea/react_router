@@ -1,11 +1,11 @@
 {
   "name": "react_router",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prepare": "",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"
@@ -17,6 +17,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.7",
     "@testing-library/react": "^15.0.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
