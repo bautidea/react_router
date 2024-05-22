@@ -1,4 +1,4 @@
-import { Link } from '../components/Link';
+import { Link } from '../Link';
 
 export default function SearchPage({ routeParams }) {
   const { id, search } = routeParams;

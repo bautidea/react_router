@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
-import Router from './components/Router';
-import Route from './components/Route';
+import Router from './Router.jsx';
+import Route from './Route.jsx';
 
 // Lazy Load of routes.
 // When we use 'lazy' to render a dynamic component, we have to specify to react

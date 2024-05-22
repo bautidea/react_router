@@ -1,19 +1,30 @@
 {
   "name": "react_router",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prepare": "",
+    "prepare": "swc ./src/*.jsx -d lib && rm lib/src/App.js lib/src/main.js && cp src/*.js lib/src && mv lib/src/* lib/ && rm -rf lib/src",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"
   },
   "dependencies": {
-    "@vitejs/plugin-react-swc": "^3.6.0",
-    "path-to-regexp": "6.2.2",
+    "path-to-regexp": "6.2.2"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

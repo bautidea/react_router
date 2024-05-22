@@ -1,7 +1,7 @@
 import { useState, useEffect, Children } from 'react';
-import { EVENTS } from '../events';
+import { EVENTS } from './events';
 import { match } from 'path-to-regexp';
-import { getCurrentPath } from '../utils/utils';
+import { getCurrentPath } from './utils';
 
 export default function Router({
   children,
