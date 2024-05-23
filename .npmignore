@@ -1,0 +1,7 @@
+src
+public
+index.html
+package-lock.json
+.gitignore
+vite.config.json
+.swcrc
